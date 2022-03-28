@@ -1,5 +1,5 @@
 cls
-chcp 65001
+$PSDefaultParameterValues['*:Encoding'] = 'utf8'
 
 while($true) {
 $start = Read-Host "Möchtest du ein NIC-TEAM erstellen (1) oder ein NIC-TEAM löschen (2) ?"
