@@ -1,3 +1,4 @@
+chcp 65001
 while($true) {
 $start = Read-Host "Möchtest du ein NIC-TEAM erstellen (1) oder ein NIC-TEAM löschen (2) ?"
 
