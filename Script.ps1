@@ -1,13 +1,13 @@
 cls
 
 while($true) {
-$start = Read-Host "Möchtest du ein NIC-TEAM erstellen (1) oder ein NIC-TEAM löschen (2) ?"
+$start = Read-Host "Moechtest du ein NIC-TEAM erstellen (1) oder ein NIC-TEAM loeschen (2) ?"
 
 if ($start -eq 1) {
 
 Get-NetAdapter
 
-$howmany = Read-Host "Wie viele Netzwerk Schnittstellen möchtest du zum NIC-TEAM hinzufügen (2-4) ?"
+$howmany = Read-Host "Wie viele Netzwerk Schnittstellen moechtest du zum NIC-TEAM hinzufuegen (2-4) ?"
 
 if ($howmany -eq 2) {
 cls
@@ -19,7 +19,7 @@ New-VMSwitch -Name $nicname -NetAdapterName "$network1","$network2" -EnableEmbed
 Set-VMSwitchTeam -Name $nicname -LoadBalancingAlgorithm Dynamic
 cls
 if ($error.clear()) {
-echo "Das NIC-Teaming wurde erfolgreich durchgeführt, Glückwunsch! Dieses Fenster schliesst sich automatisch."
+echo "Das NIC-Teaming wurde erfolgreich durchgefuehrt, Glueckwunsch! Dieses Fenster schliesst sich automatisch."
 Start-Sleep -s 6
 break
 }
@@ -37,7 +37,7 @@ New-VMSwitch -Name $nicname -NetAdapterName "$network1","$network2","$network3" 
 Set-VMSwitchTeam -Name $nicname -LoadBalancingAlgorithm Dynamic
 cls
 if ($error.clear()) {
-echo "Das NIC-Teaming wurde erfolgreich durchgeführt, Glückwunsch! Dieses Fenster schliesst sich automatisch."
+echo "Das NIC-Teaming wurde erfolgreich durchgefuehrt, Glueckwunsch! Dieses Fenster schliesst sich automatisch."
 Start-Sleep -s 6
 break
 }
@@ -56,7 +56,7 @@ New-VMSwitch -Name $nicname -NetAdapterName "$network1","$network2","$network3",
 Set-VMSwitchTeam -Name $nicname -LoadBalancingAlgorithm Dynamic
 cls
 if ($error.clear()) {
-echo "Das NIC-Teaming wurde erfolgreich durchgeführt, Glückwunsch! Dieses Fenster schliesst sich automatisch."
+echo "Das NIC-Teaming wurde erfolgreich durchgefuehrt, Glueckwunsch! Dieses Fenster schliesst sich automatisch."
 Start-Sleep -s 6
 break
 }
@@ -67,10 +67,10 @@ else {
 while($true) {
 if ($start -eq 2) {
 Get-NetAdapter
-$nicteaming = Read-Host "Welches NIC-Teaming möchtest du löschen?"
+$nicteaming = Read-Host "Welches NIC-Teaming moechtest du loeschen?"
 Remove-VMSwitch $nicteaming
 if ($error.clear()) {
-echo "Das NIC-Teaming wurde erfolgreich gelöscht, Glückwunsch! Dieses Fenster schliesst sich automatisch."
+echo "Das NIC-Teaming wurde erfolgreich geloescht, Glueckwunsch! Dieses Fenster schliesst sich automatisch."
 Start-Sleep -s 6
 break
 }
