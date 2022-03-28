@@ -1,4 +1,8 @@
-chcp 65001
+[Console]::OutputEncoding = [System.Text.Encoding]::GetEncoding(1252)
+foreach ( $filename in svn status -q ) 
+{
+  Write-Host $filename
+}
 cls
 while($true) {
 $start = Read-Host "Möchtest du ein NIC-TEAM erstellen (1) oder ein NIC-TEAM löschen (2) ?"
