@@ -1,9 +1,4 @@
-[Console]::OutputEncoding = [System.Text.Encoding]::GetEncoding(1252)
-foreach ( $filename in svn status -q ) 
-{
-  Write-Host $filename
-}
-cls
+
 while($true) {
 $start = Read-Host "Möchtest du ein NIC-TEAM erstellen (1) oder ein NIC-TEAM löschen (2) ?"
 
@@ -67,13 +62,21 @@ break
 else {
 }
 }
+}
+while($true) {
 if ($start -eq 2) {
 Get-NetAdapter
 $nicteaming = Read-Host "Welches NIC-Teaming möchtest du löschen?"
 Remove-VMSwitch $nicteaming
+if ($error.clear()) {
 echo "Das NIC-Teaming wurde erfolgreich gelöscht, Glückwunsch! Dieses Fenster schliesst sich automatisch."
 Start-Sleep -s 6
 break
+}
+else {
+     cls
+     echo "Das war wohl nix! Bitte gib einen richtigen Nic-Teaming Adapter an..."
+}
 }
 else {
     cls
