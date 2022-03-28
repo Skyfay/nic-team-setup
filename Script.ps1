@@ -1,4 +1,5 @@
 cls
+$PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'
 $PSDefaultParameterValues['*:Encoding'] = 'utf8'
 
 while($true) {
