@@ -88,7 +88,7 @@ break
 }
 else {
      cls
-     Write-Error -Message "Das war wohl nix! Bitte gib einen richtigen Nic-Teaming Adapter an..."
+     echo "Das war wohl nix! Bitte gib einen richtigen Nic-Teaming Adapter an..."
 }
 }
 }
