@@ -1,3 +1,6 @@
+# creator: Skyfay
+# Last edit: 29.03.2022
+
 cls
 
 while($true) {
