@@ -84,6 +84,7 @@ else {
     cls
     echo "Bitte gebe einen Wert von 2-4 ein!"
 }
+}
 if ($start -eq 2) {
 while($true) {
 Get-NetAdapter
