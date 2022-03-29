@@ -21,7 +21,7 @@ Set-VMSwitchTeam -Name $nicname -LoadBalancingAlgorithm Dynamic
 echo $error.Count
 Start-Sleep -s 10
 cls
-if ($error.clear()) {
+if ($error -eq $null) {
 echo "Das NIC-Teaming wurde erfolgreich durchgefuehrt, Glueckwunsch! Dieses Fenster schliesst sich automatisch."
 Start-Sleep -s 6
 break
