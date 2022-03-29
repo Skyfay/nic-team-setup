@@ -96,3 +96,4 @@ else {
     cls
     echo "Gibt bitte einen in der Frage genannten Wert ein!"
 }
+}
