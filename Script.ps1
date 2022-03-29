@@ -18,6 +18,7 @@ $network2 = Read-Host "Wie lautet die erste Netzwerk Schnittstelle?"
 $nicname = Read-Host "Wie soll das Nic Teaming heissen?"
 New-VMSwitch -Name $nicname -NetAdapterName "$network1","$network2" -EnableEmbeddedTeaming $true
 Set-VMSwitchTeam -Name $nicname -LoadBalancingAlgorithm Dynamic
+Start-Sleep -s 10
 cls
 if ($error.clear()) {
 echo "Das NIC-Teaming wurde erfolgreich durchgefuehrt, Glueckwunsch! Dieses Fenster schliesst sich automatisch."
