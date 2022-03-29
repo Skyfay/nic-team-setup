@@ -7,3 +7,7 @@ Hyper-V muss installiert sein.
 
 Laden Sie das .bat File unter Releases herunter. Vermutlich warnt der Browser oder das Antiviren Programm, das Script muss freigegeben werden.
 Nach dem Ausführen der Datei startet das Script. Es muss eine Internet Verbindung vorhanden sein, weil die Datei direkt von Github abgerufen wird.
+
+Was kann das Script?
+- Erstellen von einem NIC-Teaming
+- Löschen von NIC-Teamings
