@@ -93,6 +93,7 @@ while($true) {
 Get-NetAdapter
 $nicteaming = Read-Host "Welches NIC-Teaming moechtest du loeschen?"
 Remove-VMSwitch $nicteaming
+cls
 if ($error.Count -eq 0) {
 echo "Das NIC-Teaming wurde erfolgreich geloescht, Glueckwunsch! Dieses Fenster schliesst sich automatisch."
 Start-Sleep -s 6
