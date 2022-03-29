@@ -19,7 +19,7 @@ $nicname = Read-Host "Wie soll das Nic Teaming heissen?"
 New-VMSwitch -Name $nicname -NetAdapterName "$network1","$network2" -EnableEmbeddedTeaming $true
 Set-VMSwitchTeam -Name $nicname -LoadBalancingAlgorithm Dynamic
 cls
-if ($error.Count -eq $null) {
+if ($error.Count -eq 0) {
 echo "Das NIC-Teaming wurde erfolgreich durchgefuehrt, Glueckwunsch! Dieses Fenster schliesst sich automatisch."
 Start-Sleep -s 6
 break
@@ -41,7 +41,7 @@ $nicname = Read-Host "Wie soll das Nic Teaming heissen?"
 New-VMSwitch -Name $nicname -NetAdapterName "$network1","$network2","$network3" -EnableEmbeddedTeaming $true
 Set-VMSwitchTeam -Name $nicname -LoadBalancingAlgorithm Dynamic
 cls
-if ($error.clear()) {
+if ($error.Count -eq 0) {
 echo "Das NIC-Teaming wurde erfolgreich durchgefuehrt, Glueckwunsch! Dieses Fenster schliesst sich automatisch."
 Start-Sleep -s 6
 break
@@ -64,7 +64,7 @@ $nicname = Read-Host "Wie soll das Nic Teaming heissen?"
 New-VMSwitch -Name $nicname -NetAdapterName "$network1","$network2","$network3","$network4" -EnableEmbeddedTeaming $true
 Set-VMSwitchTeam -Name $nicname -LoadBalancingAlgorithm Dynamic
 cls
-if ($error.clear()) {
+if ($error.Count -eq 0) {
 echo "Das NIC-Teaming wurde erfolgreich durchgefuehrt, Glueckwunsch! Dieses Fenster schliesst sich automatisch."
 Start-Sleep -s 6
 break
@@ -81,7 +81,7 @@ while($true) {
 Get-NetAdapter
 $nicteaming = Read-Host "Welches NIC-Teaming moechtest du loeschen?"
 Remove-VMSwitch $nicteaming
-if ($error.Count -eq $null) {
+if ($error.Count -eq 0) {
 echo "Das NIC-Teaming wurde erfolgreich geloescht, Glueckwunsch! Dieses Fenster schliesst sich automatisch."
 Start-Sleep -s 6
 break
