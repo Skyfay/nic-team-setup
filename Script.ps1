@@ -4,7 +4,7 @@ while($true) {
 $start = Read-Host "Moechtest du ein NIC-TEAM erstellen (1) oder ein NIC-TEAM loeschen (2) ?"
 
 if ($start -eq 1) {
-
+while($true) {
 Get-NetAdapter
 
 $howmany = Read-Host "Wie viele Netzwerk Schnittstellen moechtest du zum NIC-TEAM hinzufuegen (2-4) ?"
@@ -51,6 +51,7 @@ break
 else {
     cls
     echo "Hmm, das hat nicht funktioniert. Bitte achte auf deine Rechtschreibung und versuche es erneut"
+    echo "'n"
 }
 }
 }
@@ -78,6 +79,10 @@ else {
 }
 }
 }
+}
+else {
+    cls
+    echo "Bitte gebe einen Wert von 2-4 ein!"
 }
 if ($start -eq 2) {
 while($true) {
