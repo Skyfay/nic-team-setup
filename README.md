@@ -5,6 +5,8 @@ A Powershell Script in German to create a NIC-TEAM with a Virtual VMSwitch.
 - Min. Windows Server 2012 R2 bis 2022+ muss installiert sein.
 - Hyper-V muss installiert sein.
 - Internet Verbindung, wenn Ihr direkt die .bat Datei verwenden wollt.
+- Es darf noch kein NIC-TEAM oder einen Virtuallen Adapter erstellt worden sein.
+  Falls es der Fall war, löschen und in den Netzwerk Adapter Optionen überprüfen, dass ganz unten der Hacken bei Hyper-V nicht gesetzt ist!
 
 **How to use?**
 1. Laden Sie das .bat File unter Releases herunter. 
