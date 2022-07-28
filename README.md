@@ -1,6 +1,11 @@
 # nic-team-setup
 A Powershell Script in German to create a NIC-TEAM with a Virtual VMSwitch.
 
+**Wichtig:**
+
+Das Script wird nicht weiter entwickelt. Allerdings gibt es die selbe funktion in folgendem Script sogar mit Grafischem Interface:
+https://github.com/Skyfay/Auto-NIC-Configurator
+
 **Voraussetzung:**
 - Min. Windows Server 2012 R2 bis 2022+ muss installiert sein.
 - Hyper-V muss installiert sein.
